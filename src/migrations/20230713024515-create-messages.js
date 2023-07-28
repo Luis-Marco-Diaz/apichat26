@@ -12,6 +12,10 @@ module.exports = {
       conversationId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: "Conversations",
+          key: "id",
+        },
       },
       content: {
         type: Sequelize.TEXT,
