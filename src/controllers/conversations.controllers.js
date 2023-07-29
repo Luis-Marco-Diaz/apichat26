@@ -23,8 +23,21 @@ const createConversation = async (req, res, next) => {
   }
 };
 
+const deleteConversation = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    // antes de eliminar la conversacion 3
+    // elimino todos los registros en participantes que usen ese id
+    await Conversations.destroy({ where: { id } });
+    res.status(204).end();
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createConversation,
+  deleteConversation,
 };
 
 // [3, 5, 7, 8, 9]

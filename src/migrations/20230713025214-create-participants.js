@@ -26,6 +26,7 @@ module.exports = {
             model: "Conversations",
             key: "id",
           },
+          onDelete: "CASCADE",
         },
       },
       {
