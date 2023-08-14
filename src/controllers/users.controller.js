@@ -79,6 +79,13 @@ const loginUser = async (req, res, next) => {
   }
 };
 
+//  Un endpoint que permita obtener a todos los usuarios de la aplicación ( contactos )
+const allusers = async (req, res, next) => {
+
+ 
+
+};
+
 module.exports = {
   createUser,
   loginUser,

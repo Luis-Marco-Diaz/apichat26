@@ -35,6 +35,21 @@ const deleteConversation = async (req, res, next) => {
   }
 };
 
+
+// endpoint que permita obtener todas las conversaciones en las que participa un usuario
+
+const allConversations = async (req, res, next) => {
+
+};
+
+// endpoint que permita obtener una conversación incluyendo sus participantes y los mensajes 
+
+const oneConversation = async (req,res, next) => {
+
+};
+
+
+
 module.exports = {
   createConversation,
   deleteConversation,

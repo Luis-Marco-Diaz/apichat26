@@ -1,13 +1,13 @@
 require("dotenv").config();
 module.exports = {
   development: {
-    username: "iannacus",
-    password: "root",
-    database: "chat_db",
-    port: 5432,
-    host: "localhost",
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+    host: process.env.DB_HOST,
     dialect: "postgres",
-    logging: false, // no uestra en consola los console.log de sequelize
+    //logging: true, // false no muestra en consola los console.log de sequelize
   },
   test: {
     username: "root",
@@ -17,7 +17,7 @@ module.exports = {
     dialect: "mysql",
   },
   production: {
-    username: process.env.DB_USER,
+    username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
